@@ -6,9 +6,8 @@ $(document).ready(function(){
         }
     });
 });
-
-let num = "զրո մեկ երկու երեք չորս հինգ վեց յոթ ութ ինը տաս տասնմեկ տասներկու thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(" ");
-let tens = "քսան երեսուն քառասուն հիթսււն վաթսուն յոթսուն ութսուն ինսուն".split(" ");
+let num = "զրո մեկ երկու երեք չորս հինգ վեց յոթ ութ ինը տաս տասնմեկ տասներկու տասներեք տասնչորս տասնհինգ տասնվեց տասնյոթ տասնութ տասնինը".split(" ");
+let tens = "քսան երեսուն քառասուն հիսուն վաթսուն յոթանասուն ութսուն ինսուն".split(" ");
 
 function number2words(number) {
     let result;
@@ -36,9 +35,6 @@ function number2words(number) {
     }
     return result;
 }
-
-
-
 function toDigit(n) {
     let splittedDigit = parseFloat(n).toFixed(2).split('.');
     let result = number2words(Number(splittedDigit[0]));
