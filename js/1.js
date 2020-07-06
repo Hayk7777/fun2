@@ -28,7 +28,7 @@ function number2words(number) {
         return result = number2words(Math.floor(number / 1000000)) + " միլիոն" + (number % 1000000 != 0 ? " " + number2words(number % 1000000) : "");
     }
     if (number < 1000000000000) {
-        return result = number2words(Math.floor(number / 1000000000)) + " միիարթ" + (number % 1000000000 != 0 ? " " + number2words(number % 1000000000) : "");
+        return result = number2words(Math.floor(number / 1000000000)) + " միլիարդ" + (number % 1000000000 != 0 ? " " + number2words(number % 1000000000) : "");
     }
     if (number < 1000000000000000) {
         return result = number2words(Math.floor(number / 1000000000000)) + " տրիլիոն" + (number % 1000000000000 != 0 ? " " + number2words(number % 1000000000000) : "");
@@ -39,7 +39,7 @@ function toDigit(n) {
     let splittedDigit = parseFloat(n).toFixed(2).split('.');
     let result = number2words(Number(splittedDigit[0]));
     if (splittedDigit[1]) {
-        let afterDigit = number2words(Number(splittedDigit[1]))
+        let afterDigit = number2words(Number(splittedDigit[1]));
         result +=  " դրամ " + afterDigit + " լումա ";
     }
     return result;
